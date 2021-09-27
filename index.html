@@ -7,7 +7,7 @@
         <link rel="stylesheet"  href="./assets/css/reset.css" />
         <link rel="stylesheet"  href="./assets/css/style.css" />
       </head>
-       <!--front page 
+       <!--front page
         welcome to quiz- and rules -->
         <!-- button to start (start quiz)-->
 
@@ -19,17 +19,21 @@
       <body>
           <header>
             <h1>Coding Quiz</h1>
+
+            <div class="timer card">
+                <div class="timer-count">90 </div>
+            </div>
           </header>
         <section class="box">
                 <p>Choose the right answer for each question as fast, and efficently as possible.
                      For every wrong answer, 10 seconds will be deducted from the counter. The remaining time after the quiz will be your final score. Good Luck!!!
                 </p>
                 <div>
-                <button class="start-button"> Start Quiz</button>
+                <button class="button"> Start Quiz</button>
                 </div>
         </section>
 
-        <section> <!--questions-->
+        <section> <!--questions// use data-states-->
             <div>
                 <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
                 <div>
@@ -90,7 +94,7 @@
                     <input placeholder="your name" id="name" />
                 </div>
                 <div>
-                <button id="submit">Submit</button>
+                <button class="button" id="submit">Submit</button>
                 </div>
             </form>
         </section>
@@ -98,8 +102,9 @@
         <section> <!--highscore-->
             <h2>Highscores</h2>
             <!-- dropdown (todo list/local storage)-->
-            <button for="try-again">Try Again</button>
-            <button for="clear-highscore"> Clear Highscore-</button>
+            <button class="button" for="try-again">Try Again</button>
+            <button class="button" for="clear-highscore"> Clear Highscore-</button>
         </section>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>

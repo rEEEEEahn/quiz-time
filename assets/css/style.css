@@ -2,4 +2,43 @@
 / choices are texdt aligned left
 / choices have boxes and buttons have same box as well
 / make right and wrong CSS 
-/ 
+/ for questions have all postion absolute and hidden. when user ansewers question re-hide and show next
+*/
+* {
+    color:	#E0E0E0;
+}
+h1 {
+    font-size: 32px;
+    color: #EB6123;
+    display: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    background-color: #7349AC;
+}
+header {
+    background-color:#512888;
+}
+
+.timer-count {
+    color: #EB6123;
+    font-weight: bold;
+    text-align: right;
+    padding:10px;
+}
+
+header {
+    border-bottom: solid black;
+}
+
+.box {
+    padding: 30px;
+}
+
+.button {
+    float: right;
+    color:#EB6123;
+    background-color:black;
+}
