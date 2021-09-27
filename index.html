@@ -4,10 +4,10 @@
         <title>Quiz Time!</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet"  href="./assets/css/reset.css" />
         <link rel="stylesheet"  href="./assets/css/style.css" />
       </head>
-      <body>
-        <!--front page 
+       <!--front page 
         welcome to quiz- and rules -->
         <!-- button to start (start quiz)-->
 
@@ -16,6 +16,90 @@
         <!-- RIGHT OR WRONG will appear at bottom if chosen-->
         <!-- Finish screen with score W/ box to put intials for highscore submit button as well -->
         <!-- high score page drop down of all scores (last exercise of 9/24) have button for play again -->
+      <body>
+          <header>
+            <h1>Coding Quiz</h1>
+          </header>
+        <section class="box">
+                <p>Choose the right answer for each question as fast, and efficently as possible.
+                     For every wrong answer, 10 seconds will be deducted from the counter. The remaining time after the quiz will be your final score. Good Luck!!!
+                </p>
+                <div>
+                <button class="start-button"> Start Quiz</button>
+                </div>
+        </section>
 
-      </body>
+        <section> <!--questions-->
+            <div>
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <div>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <div>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <div>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <div>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <div>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                    <p>Lorem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section> <!--finish screen --> 
+            <h2> Congrats!</h2>
+            <p>Your final score is ---</p>
+            <form>
+                <div class="input">
+                    <label for="name">Name</label>
+                    <input placeholder="your name" id="name" />
+                </div>
+                <div>
+                <button id="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+        
+        <section> <!--highscore-->
+            <h2>Highscores</h2>
+            <!-- dropdown (todo list/local storage)-->
+            <button for="try-again">Try Again</button>
+            <button for="clear-highscore"> Clear Highscore-</button>
+        </section>
+    </body>
 </html>
