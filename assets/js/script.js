@@ -61,6 +61,13 @@ function startQuiz (){
       }
     }
 
+  function endGame (){
+    score = time
+    document.getElementById('question').innerHTML = ''
+    document.getElementById('time').textContent = `Time: ${time}`
+    document.getElementById('score').textContent = `Score: ${score}`
+    document.getElementById('scoreForm').className = ''
+    }
 
 // timer starting from 90 seconds counting donw to 0
 document.getElementById("start-button").addEventListener('click', function() {
@@ -78,7 +85,7 @@ document.getElementById("start-button").addEventListener('click', function() {
   }, 1000);
   startQuiz();
 });
-
+//listens for clicks on quiz
 document.addEventListener('click', function(event){
     if (event.target.classList.contains('collection-item')) {
       if (event.target.dataset.choice !== questions[current].answers) {
@@ -88,7 +95,7 @@ document.addEventListener('click', function(event){
       current++;
       setTimeout(function () {
         if (current >= questions.length) {
-          endGame(); //make *****
+          endGame(); 
           clearInterval(secondsLeft);
         }
         else {
@@ -97,6 +104,7 @@ document.addEventListener('click', function(event){
       }, 200);
     }
   });
+
 // function, (where must is going to be)
 //if answered wrong deduct 10 secs from timer, show "youre wrong statemnt", 
 //if timer is <0 stop quiz and show score
