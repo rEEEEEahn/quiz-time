@@ -5,7 +5,7 @@
 / for questions have all postion absolute and hidden. when user ansewers question re-hide and show next
 */
 * {
-    color:	#E0E0E0;
+    color:	black;
 }
 h1 {
     font-size: 32px;
@@ -41,4 +41,7 @@ header {
     float: right;
     color:#EB6123;
     background-color:black;
+}
+ul :hover {
+    cursor: pointer;
 }

@@ -62,9 +62,9 @@ function startQuiz (){
     }
 
   function endGame (){
-    score = time
+    score = secondsLeft
     document.getElementById('question').innerHTML = ''
-    document.getElementById('time').textContent = `Time: ${time}`
+    document.getElementById('time').textContent = `Time: ${secondsLeft}`
     document.getElementById('score').textContent = `Score: ${score}`
     document.getElementById('scoreForm').className = ''
     }
@@ -76,6 +76,7 @@ document.getElementById("start-button").addEventListener('click', function() {
     if (secondsLeft <= 0) {
       // Stops execution of action at set interval
      //make this***
+      endGame();
       clearInterval(timerInterval);
       // Calls function to go to end screen
     } else {
@@ -104,6 +105,39 @@ document.addEventListener('click', function(event){
       }, 200);
     }
   });
+
+  document.getElementById('submit').addEventListener('click', function(event) {
+    event.preventDefault()
+    let userInitials = document.getElementById('name').value
+    let userScores = JSON.parse(localStorage.getItem('userScores')) || []
+    userScores.push({ userInitials, score })
+    localStorage.setItem('userScores', JSON.stringify(userScores))
+  
+    userScores.sort((a, b) => b.score - a.score)
+  
+    let tableHead = document.createElement('table')
+    tableHead.className = 'table highlight centered responsive-table'
+    tableHead.innerHTML = `
+          <thead>
+            <tr>
+                <th class="tableLabel">Initials</th>
+                <th class="tableLabel">Score</th>
+            </tr>
+          </thead>
+    `
+    let tableCont = document.createElement('tbody')
+    for (let i = 0; i < userScores.length; i++) {
+      tableCont.innerHTML += `
+        <tr>
+          <td class="tableValue">${userScores[i].userInitials}</td>
+          <td class="tableValue">${userScores[i].score}</td>
+        </tr>
+      `
+    }
+    tableHead.append(tableCont)
+    document.getElementById('question').append(tableHead)
+  })
+  document.getElementById('try-again').addEventListener('click', start());
 
 // function, (where must is going to be)
 //if answered wrong deduct 10 secs from timer, show "youre wrong statemnt", 

@@ -35,29 +35,26 @@
 
         <div id="question"></div>
 
+        <div class="row">
+            <p id="time" class="TandS"></p>
+            <p id="score" class="TandS"></p>
+         </div>
 
 
 
-        <section> <!--finish screen --> 
-            <h2> Congrats!</h2>
-            <p>Your final score is ---</p>
-            <form>
+
+            <form id="scoreForm" class="hidden">
                 <div class="input">
-                    <label for="name">Name</label>
+                    <label >Name</label>
                     <input placeholder="your name" id="name" />
                 </div>
                 <div>
                 <button class="button" id="submit">Submit</button>
                 </div>
             </form>
-        </section>
-        
-        <section> <!--highscore-->
-            <h2>Highscores</h2>
-            <!-- dropdown (todo list/local storage)-->
-            <button class="button" for="try-again">Try Again</button>
-            <button class="button" for="clear-highscore"> Clear Highscore-</button>
-        </section>
+            <button class="button" id="try-again">Try Again</button>
+            <button class="button" > Clear Highscore</button>
+
         <!--adding jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="assets/js/script.js"></script>
